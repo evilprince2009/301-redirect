@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Code Artisan Solutions</title>
+        <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+        <style>
+            html,
+            body {
+                background: #000000;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Artisan Solutions</title>
-    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
-    <style>
-        html,
-        body {
-            background: #1f1f1f;
-        }
-    </style>
-</head>
+            #outer {
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                height: 100vh;
+            }
 
-<body>
-    <span>Etiam tellus nisl, pretium at leo pellentesque, iaculis porta neque. Nunc eu dignissim nunc. Sed purus massa,
-        eleifend at congue eget, suscipit eget dui. Quisque mattis a felis sed blandit.
-        <ol>
-            <li>Hello worlds, 700 for they</li>
-            <li>Hello worlds, 700 for they</li>
-            <li>Hello worlds, 700 for they</li>
-            <li>Hello worlds, 700 for they</li>
-        </ol>
-    </span>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            window.location.href = "https://codeartisansolutions.com";
-        });
-    </script>
-</body>
+            #inner {
+                width: 100%;
+                text-align: center;
+                color: #f2f2f2;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        </style>
+    </head>
 
+    <body>
+        <div id="outer">
+            <div id="inner">
+                <h2>301 Redirect</h2>
+                <p>Redirecting to <a href="https://codeartisansolutions.com">codeartisansolutions.com</a></p>
+            </div>
+        </div>
+
+        <script>
+            const url = document.querySelector("a").getAttribute("href");
+            document.addEventListener("DOMContentLoaded", () => {
+                window.location.href = (() => url)();
+            });
+        </script>
+    </body>
 </html>
