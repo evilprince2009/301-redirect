@@ -1,0 +1,22 @@
+html,
+body {
+    background: #000000;
+}
+
+#outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#inner {
+    width: 100%;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
